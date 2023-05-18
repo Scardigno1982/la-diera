@@ -514,6 +514,7 @@ class ArticulacionController extends Controller
               return view('show_resultado', compact('msg', 'msg2','ruta','titulo'));
         }
 
+<<<<<<< HEAD
         // metodo para el boton actualizar usuarios,dentro del menu de procesos
         
    public function actulizar_users(){
@@ -528,6 +529,20 @@ class ArticulacionController extends Controller
       }
       return view('actualizaruser', ['info' => $info]);
   }
+=======
+        public function actulizar_users(){
+            $consulta = DB::connection('padron')->select("SELECT bsas.add_user_ra()");
+            $info = "";
+            if (count($consulta)<1){
+               $info="No se actulizaron usuarios";
+            }
+            for ($i = 0; $i < count($consulta); $i++) {
+               $parts = explode(',', str_replace(['(', ')'], '', $consulta[$i]->add_user_ra));
+               $info .= $parts[0] . ': ' . $parts[1] . ' - ' . $parts[2] . "<br>";
+            }
+            return view('actualizaruser', ['info' => $info]);
+       }     
+>>>>>>> 07bcfe95e60f8acf1b514932b3bb4927995de898
   
   }
   /*
@@ -536,5 +551,9 @@ class ArticulacionController extends Controller
   en eliminar_formulario 
       agregar delete localizacion si tiene marcar localizacion_para_borrar_pendiente
   
+<<<<<<< HEAD
   */
 
+=======
+  */
+>>>>>>> 07bcfe95e60f8acf1b514932b3bb4927995de898

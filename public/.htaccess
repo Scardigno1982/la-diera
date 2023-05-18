@@ -4,7 +4,12 @@
     </IfModule>
 
     RewriteEngine On
+<<<<<<< HEAD
     RewriteBase /die/
+=======
+     
+#    RewriteBase /diera/
+>>>>>>> 07bcfe95e60f8acf1b514932b3bb4927995de898
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]

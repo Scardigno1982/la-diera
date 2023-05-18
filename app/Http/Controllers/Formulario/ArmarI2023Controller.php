@@ -26,10 +26,17 @@ static public function I2023()
         //$F=ArmarI2023Controller::I2023_CENS(131);
         //$F=ArmarI2023Controller::I2023_ESPECIAL(132);
         //$F=ArmarI2023Controller::I2023_ARTISTICA(133);
+<<<<<<< HEAD
         // $F=ArmarI2023Controller::I2023_FP(134);
         $F=ArmarI2023Controller::I2023_CEC(135);
         // $F=ArmarI2023Controller::I2023_CEF(136);
         //$F=ArmarI2023Controller::I2023_CIIE(137);
+=======
+        //$F=ArmarI2023Controller::I2023_FP(134);
+        //$F=ArmarI2023Controller::I2023_CEC(135);
+        //$F=ArmarI2023Controller::I2023_CEF(136);
+        $F=ArmarI2023Controller::I2023_CIIE(137);
+>>>>>>> 07bcfe95e60f8acf1b514932b3bb4927995de898
 
       
          

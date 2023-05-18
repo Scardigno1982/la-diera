@@ -6,7 +6,11 @@
      <div class="card">  {{--  Card  --}}
       <div class="card-header separa_datos"><b> PLANILLAS DE ALTAS, BAJAS Y NOVEDADES DE SERVICIOS EDUCATIVOS  {{$periodo->periodo}}</b></div>
      
+<<<<<<< HEAD
         <form class="form-horizontal" action="{{ url('new_pservicio') }}" method="POST" enctype="multipart/form-data">
+=======
+        <form class="form-horizontal" action="{{ url('new_pservicio') }}" method="GET">
+>>>>>>> 07bcfe95e60f8acf1b514932b3bb4927995de898
         {{ csrf_field() }}
         <input name='id_periodo' type="number" value="{{$periodo->id_periodo}}" hidden>
           <ul class="list-group list-group-flush">           
@@ -68,6 +72,7 @@
                     <label for="fecha">Fecha (a partir de)</label>
                      <input name='fecha' type="date" value="" class="form-control focusNext" placeholder="Fecha del alta o baja" tabindex="10">  
                   </div>  
+<<<<<<< HEAD
                 </div> <br>                
                     <input type="file" name="archivo" accept="application/pdf" class="form-control focusNext" placeholder="Subir un pdf que acredite el movimiento"  tabindex="11" required>               
                 <br>
@@ -75,6 +80,13 @@
                   <div class="col-12">
                     <label for="observ">Observaciones</label>
                     <input name='observ' type="textarea" value="" class="form-control focusNext" placeholder="Observaciones" tabindex="12">  
+=======
+                </div> <br>
+                <div class="form-row">
+                  <div class="col-12">
+                    <label for="observ">Observaciones</label>
+                    <input name='observ' type="textarea" value="" class="form-control focusNext" placeholder="Observaciones" tabindex="11">  
+>>>>>>> 07bcfe95e60f8acf1b514932b3bb4927995de898
                   </div>
                 </div><br>                
                 <div class="col-md-12 offset-md-5">   
@@ -106,7 +118,11 @@
                       <select value="" name="distrito" id="distrito" class="form-control">
                           <option value="">Todos los distritos</option>  
                             @foreach ($partidos as $element =>$par)
+<<<<<<< HEAD
                               @if ($par->c_departamento==isset($filtro_servicio['filter_distrito']))
+=======
+                              @if ($par->c_departamento==$filtro_servicio['filter_distrito'])
+>>>>>>> 07bcfe95e60f8acf1b514932b3bb4927995de898
                                 <option value="{{$par->c_departamento}}" selected="selected">{{$par->nombre}}</option>
                               @else 
                                 <option value="{{$par->c_departamento}}">{{$par->nombre}}</option>
@@ -117,13 +133,21 @@
                     </th> 
                 <th width="100px">
                   <label for="nronota2">Nro de nota
+<<<<<<< HEAD
                   <input name='nronota2' type="number" value="{{isset($filtro_servicio['filter_nronota'])}}"  min="0" class="form-control"></label></th>
+=======
+                  <input name='nronota2' type="number" value="{{$filtro_servicio['filter_nronota']}}"  min="0" class="form-control"></label></th>
+>>>>>>> 07bcfe95e60f8acf1b514932b3bb4927995de898
                 <th>            
                     {{Form::button('Aplicar filtro', array('type' => 'submit',   'name' => 'submitbutton',
                     'value'=>'filter-true2', 'class' => 'btn btn-primary', 'title'=>'Aplicar filtro a la grilla'))}}
                 </th>
                 <th>  
+<<<<<<< HEAD
                     @if (isset($filtro_servicio['filter_aplicado2']))
+=======
+                    @if ($filtro_servicio['filter_aplicado2'])
+>>>>>>> 07bcfe95e60f8acf1b514932b3bb4927995de898
                       {{Form::button('Quitar filtro', array('type' => 'submit',  'name' => 'submitbutton',
                       'value'=>'filter-false2', 'class' => 'btn btn-primary', 'title'=>'Quitar filtro a la grilla'))}}     
                    @endif 
@@ -132,8 +156,13 @@
                 <th>
                     <form action="{{ url('grilla_excel_pservicios',[$periodo->id_periodo]) }}" method="GET"> 
                         {!! csrf_field() !!}                                   
+<<<<<<< HEAD
                         <input name='distrito' type="text" value="{{isset($filtro_servicio['filter_distrito'])}}" hidden>
                         <input name='nronota2' type="number" value="{{isset($filtro_servicio['filter_nronota'])}}" hidden >
+=======
+                        <input name='distrito' type="text" value="{{$filtro_servicio['filter_distrito']}}" hidden>
+                        <input name='nronota2' type="number" value="{{$filtro_servicio['filter_nronota']}}" hidden >
+>>>>>>> 07bcfe95e60f8acf1b514932b3bb4927995de898
                             <th> {{Form::button('Exportar a Excel', array('type' => 'submit',  'name' => 'excel',
                               'value'=>'excel', 'class' => 'btn btn-primary', 'title'=>'Exportar grilla a excel'))}}   </th>
                       {!! Form::close()!!}    

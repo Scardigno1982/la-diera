@@ -1464,7 +1464,11 @@ public function consistencia_20 ($cons,$ncuadro,$c_datosno0)
 	            $r2= unserialize($cons->cmp2);
 	            $r3= unserialize($cons->cmp3);
 	            $C=$this->cuadros[$ncuadro];
+<<<<<<< HEAD
                 dd($C);
+=======
+
+>>>>>>> 07bcfe95e60f8acf1b514932b3bb4927995de898
 		        for ($col=1; $col<count($C->celdas[1])+1; $col++)
 		        {   //echo ' consistencia: '. $cons->descripcion .' <BR>';
 		            $s1= $C->c_suma([ 'col'=>[$col] , 'fil'=>$r1['fil'] ]);

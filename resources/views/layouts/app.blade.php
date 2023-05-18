@@ -123,9 +123,13 @@
                   <a class="btn btn-primary dropdown-item"href="{{ url('/select_periodo',['$ruta'=>'proceso_articulacion', '$titulo'=>'Articular Relevamiento con Padron' ]) }}">{{ __('Articular') }}</a>
                   <a class="btn btn-primary dropdown-item"href="{{ url('/select_periodo',['$ruta'=>'confirmar_completos', '$titulo'=>'Confirmar Formularios Completos']) }}">{{ __('Confirmar Formularios') }} </a>
                   <a class="btn btn-primary dropdown-item"href="{{ url('/generar_formularios') }}">{{ __('Generar Formularios') }} </a>
+<<<<<<< HEAD
 
                   
                   <a class="btn btn-primary dropdown-item"href="{{ url('/actulizar_users') }}">{{ __('Actualizar usuarios ra') }} </a>
+=======
+                  <a class="btn btn-primary dropdown-item"href="{{ url('/actulizar_users') }}">{{ __('Actualizar usuarios RA') }} </a>
+>>>>>>> 07bcfe95e60f8acf1b514932b3bb4927995de898
                </div>
             </li>
             @endrole   {{--  fin procesos  --}}   

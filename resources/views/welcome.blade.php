@@ -76,7 +76,11 @@
                             <div class="align-center">
                               <a href="{{ route('planillas') }}"><i class="fa fa-download fa-5x"></i></a>
                               <h4 class="text-bold">Descarga de Planillas</h4>
+<<<<<<< HEAD
                                <p>Descarga de las planilla del relevamiento Inicial 2019.</p>                    
+=======
+                               <p>Descarga de las planilla del relevamiento Inicial 2023.</p>                    
+>>>>>>> 07bcfe95e60f8acf1b514932b3bb4927995de898
                             </div>
                           </div>
                         </div>

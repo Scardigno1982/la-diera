@@ -14,7 +14,11 @@ static public function F2022()
    		$F=DefinicionMigracionF2022Controller::F2022_INICIAL(114);
 		//$F=DefinicionMigracionF2022Controller::F2022_PRIMARIA(115);
 		//$F=DefinicionMigracionF2022Controller::F2022_SECUNDARIA(116);
+<<<<<<< HEAD
 		// $F=DefinicionMigracionF2022Controller::F2022_SUPERIOR(117); 
+=======
+		//$F=DefinicionMigracionF2022Controller::F2022_SUPERIOR(117); 
+>>>>>>> 07bcfe95e60f8acf1b514932b3bb4927995de898
 		// $F=DefinicionMigracionF2022Controller::F2022_EPA(118); 
 		// $F=DefinicionMigracionF2022Controller::F2022_CENS(119);
 		// $F=DefinicionMigracionF2022Controller::F2022_ESPECIAL(120); 

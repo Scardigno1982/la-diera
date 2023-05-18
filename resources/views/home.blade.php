@@ -29,8 +29,18 @@
              @endforeach  
           @endif         
           <div><b> {{ __('Descarga de Planillas') }}</b></div>
+<<<<<<< HEAD
            <a class="btn btn-primary" href="{{ route('planillas') }}">Inicial 2023</a>
          
+=======
+           <!-- <a class="btn btn-primary" href="{{ route('planillas2018') }}">Final 2018</a>
+            <a class="btn btn-primary" href="{{ route('planillas') }}">Inicial 2019</a> -->
+           <!-- <a class="btn btn-primary" href="{{ route('planillas2019') }}">Final 2019</a> -->           
+           <!-- <a class="btn btn-primary" href="{{ route('planillasI2020') }}">Inicial 2020</a>
+           <a class="btn btn-primary" href="{{ route('planillasF2020') }}">Final 2020</a> -->
+           <a class="btn btn-primary" href="{{ route('planillas') }}">Inicial 2023</a>
+           <!-- <a class="btn btn-primary" href="{{ route('planillasF2021') }}">Final 2021</a> -->
+>>>>>>> 07bcfe95e60f8acf1b514932b3bb4927995de898
         </div>
       </div>   
       <!-- {{-- relevamiento Anual --}}

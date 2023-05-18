@@ -39,5 +39,8 @@ class User extends Authenticatable
         }
     }
 
+<<<<<<< HEAD
     
+=======
+>>>>>>> 07bcfe95e60f8acf1b514932b3bb4927995de898
 }

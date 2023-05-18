@@ -195,6 +195,9 @@ return [
     */
 
     'same_site' => null,
+<<<<<<< HEAD
     // 'same_site' => "none",
+=======
+>>>>>>> 07bcfe95e60f8acf1b514932b3bb4927995de898
 
 ];

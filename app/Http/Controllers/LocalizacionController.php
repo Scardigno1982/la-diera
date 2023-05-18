@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redis;
+<<<<<<< HEAD
 use Illuminate\Http\UploadedFile;
+=======
+>>>>>>> 07bcfe95e60f8acf1b514932b3bb4927995de898
 use Session;
 use Auth;
 use DB;
@@ -393,11 +396,17 @@ class LocalizacionController extends Controller
           { $formulario = New DatosFormularioController($edit_id); }
 
       $result = collect($request->all());
+<<<<<<< HEAD
    
       $cuadros_editados=$result->except("_token")->toArray()['cuadros'];
       
       $formulario->cargar_input($cuadros_editados);
       // dd($formulario);
+=======
+      $cuadros_editados=$result->except("_token")->toArray()['cuadros'];
+      $formulario->cargar_input($cuadros_editados);
+
+>>>>>>> 07bcfe95e60f8acf1b514932b3bb4927995de898
       // toastr()->info('Consistiendo.....');
 
       $formulario->consistir_cuadros_editados($cuadros_editados);
@@ -563,8 +572,13 @@ class LocalizacionController extends Controller
           $servicios_educativos = p_servicios_educativos::select('p_servicios_educativos.*', 'partidos.c_departamento', 'partidos.codigo_distrito','partidos.nombre as distrito', 'users.username', 'users.name')
           ->join('partidos', 'p_servicios_educativos.c_departamento', '=', 'partidos.c_departamento')      
           ->join('users', 'users.id', '=', 'p_servicios_educativos.id_usuario')    
+<<<<<<< HEAD
           ->Nronota(isset($filtro_servicio['filter_nronota']))       
           ->Distrito(isset($filtro_servicio['filter_distrito']))         
+=======
+          ->Nronota($filtro_servicio['filter_nronota'])       
+          ->Distrito($filtro_servicio['filter_distrito'])         
+>>>>>>> 07bcfe95e60f8acf1b514932b3bb4927995de898
           ->where('id_periodo', '=', $periodo->id_periodo)            
           ->Paginate(5);
       }  
@@ -573,8 +587,13 @@ class LocalizacionController extends Controller
           $servicios_educativos = p_servicios_educativos::select('p_servicios_educativos.*', 'partidos.c_departamento', 'partidos.codigo_distrito', 'partidos.nombre as distrito', 'users.username', 'users.name')
           ->join('partidos', 'p_servicios_educativos.c_departamento', '=', 'partidos.c_departamento')      
           ->join('users', 'users.id', '=', 'p_servicios_educativos.id_usuario')    
+<<<<<<< HEAD
           ->Nronota(isset($filtro_servicio['filter_nronota']))       
           ->Distrito(isset($filtro_servicio['filter_distrito']))     
+=======
+          ->Nronota($filtro_servicio['filter_nronota'])       
+          ->Distrito($filtro_servicio['filter_distrito'])     
+>>>>>>> 07bcfe95e60f8acf1b514932b3bb4927995de898
           ->where('id_periodo', '=', $periodo->id_periodo)
           ->where('id_usuario', '=', $id_usuario)    
           ->Paginate(5);    
@@ -591,9 +610,12 @@ class LocalizacionController extends Controller
 
   public function new_pservicio(Request $r)
   {
+<<<<<<< HEAD
       $allowedTypes = ['application/pdf'];
       $fileType = $_FILES['archivo']['type'];
 
+=======
+>>>>>>> 07bcfe95e60f8acf1b514932b3bb4927995de898
       $serv_edu= new p_servicios_educativos;
       $serv_edu->id_periodo= $r->id_periodo;
       $serv_edu->id_usuario =Auth::user()->id;    
@@ -609,6 +631,7 @@ class LocalizacionController extends Controller
       $serv_edu->observaciones= $r->observ;      
       $serv_edu->nronota= 0;
       // $r->nronota;      
+<<<<<<< HEAD
  
       if ($r->hasFile('archivo')) {  
         if (in_array($fileType, $allowedTypes)) {
@@ -628,6 +651,12 @@ class LocalizacionController extends Controller
      $serv_edu->save();      
      toastr()->info('Datos grabados correctamente');
      return back();
+=======
+
+      $serv_edu->save();    
+      toastr()->info('Datos grabados correctamente');
+      return back();
+>>>>>>> 07bcfe95e60f8acf1b514932b3bb4927995de898
   }
 
   public function eliminarservicio($id)
@@ -644,6 +673,7 @@ class LocalizacionController extends Controller
       ->where('p_servicios_educativos.id', '=', $id)->first();
       
       $partidos=Partidos::orderBy('nombre')->select('c_departamento', 'nombre')->where('codigo_distrito', '<' ,'900')->get();   
+<<<<<<< HEAD
 
       // $public_path = public_path();
       // $url = $public_path.'/storage/'.$archivo;
@@ -652,6 +682,8 @@ class LocalizacionController extends Controller
       // {
       //   return response()->download($url);
       // }
+=======
+>>>>>>> 07bcfe95e60f8acf1b514932b3bb4927995de898
       return view('servicio_edu_edit', compact('servicios_educativos', 'partidos'));  
   }
 
@@ -1991,12 +2023,15 @@ public function datos_para_mail($codigo_jurisdiccional, $p){
      return  $datos;
 }
 
+<<<<<<< HEAD
 /**
 * guarda un archivo en nuestro directorio local.
 *
 * @return Response
 */
 
+=======
+>>>>>>> 07bcfe95e60f8acf1b514932b3bb4927995de898
   
 
 } // fin

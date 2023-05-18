@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 
+<<<<<<< HEAD
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -24,5 +25,7 @@ use Illuminate\Http\Request;
 //     return auth()->user();
 // });
 
+=======
+>>>>>>> 07bcfe95e60f8acf1b514932b3bb4927995de898
 
 Route::resource('indicadores', 'IndicadorController');

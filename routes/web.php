@@ -45,7 +45,11 @@ Route::group( ['middleware' => ['auth','checkusersistema']], function() {
 
     // SERVICIOS EDUCATIVOS
     Route::get('/pservicio/{idperiodo}', 'LocalizacionController@pservicio')->name('pservicio');
+<<<<<<< HEAD
     Route::post('/new_pservicio', 'LocalizacionController@new_pservicio')->name('new_pservicio');   
+=======
+    Route::get('/new_pservicio', 'LocalizacionController@new_pservicio')->name('new_pservicio');   
+>>>>>>> 07bcfe95e60f8acf1b514932b3bb4927995de898
     Route::post('/edit_servicio_educativo/{id}', 'LocalizacionController@edit_servicio_educativo')->name('edit_servicio_educativo');
     Route::post('/edit_pservicio/{id}', 'LocalizacionController@edit_pservicio')->name('edit_pservicio');
     Route::post('/eliminarservicio/{id}', 'LocalizacionController@eliminarservicio')->name('eliminarservicio');
@@ -91,5 +95,8 @@ Route::group( ['middleware' => ['auth','checkusersistema']], function() {
     
     Route::get('/generar_formularios', 'Formulario\ArmarFormularioController@generar_formularios');
     Route::get('/actulizar_users', 'Padron\ArticulacionController@actulizar_users');
+<<<<<<< HEAD
 
+=======
+>>>>>>> 07bcfe95e60f8acf1b514932b3bb4927995de898
 });
